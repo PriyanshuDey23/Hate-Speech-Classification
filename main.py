@@ -18,3 +18,24 @@ except Exception as e:
     raise CustomException(e,sys) from e
 
 # After executing , Artifacts folder , zip file download , unzip of the file will happen
+
+
+
+
+# Call the pipeline  (src\Hate_Speech_Classification\pipeline\stage_02_data_validation.py) in main .py 
+
+from Hate_Speech_Classification.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
+
+STAGE_NAME="Data Validation Stage"
+try:
+    logging.info(f"Stage {STAGE_NAME} Started")
+    obj=DataValidationTrainingPipeline()  # Calling the class
+    obj.main()                           # Calling the main method,Start the data ingestion part
+    logging.info(f" Stage {STAGE_NAME} Completed")
+
+except Exception as e:
+    raise CustomException(e,sys) from e
+
+# After executing , Artifacts folder , zip file download , unzip of the file will happen
+
+
