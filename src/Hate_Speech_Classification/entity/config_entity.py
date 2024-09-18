@@ -10,12 +10,24 @@ class DataIngestionConfig:  # It is not an actual class , but a data class
     unzip_dir:Path
 
 # Data Validation
-from dataclasses import dataclass
-from pathlib import Path
-
 
 @dataclass(frozen=True)
 class DataValidationConfig:
     root_dir: Path
     STATUS_FILE: str
     ALL_REQUIRED_FILES: Path
+
+# Data Transformation
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    Transformed_filename: Path
+    Data_dir: str
+    Id: str
+    Axis: int
+    Inplace: bool
+    Drop_Columns: list
+    Class: str
+    Label: str
+    Tweet: str

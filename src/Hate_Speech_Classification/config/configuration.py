@@ -14,6 +14,8 @@ class ConfigurationManager:
             # From common.py
             create_directories([self.config.artifacts_root]) # I can call using the key name using Box Type
 
+# Data ingestion
+
     def get_data_ingestion_config(self) -> DataIngestionConfig: # calling Data ingest config
         config=self.config.data_ingestion  # Storing the config
 
@@ -29,6 +31,8 @@ class ConfigurationManager:
 
         return data_ingestion_config
     
+# Data Validation
+    
     def get_data_validation_config(self) -> DataValidationConfig:
         config = self.config.data_validation
 
@@ -41,3 +45,28 @@ class ConfigurationManager:
         )
 
         return data_validation_config  
+    
+# Data Transformation
+
+    def get_data_Transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transformation
+
+        create_directories([config.root_dir]) 
+
+        data_transformation_config = DataTransformationConfig(
+            root_dir=config.root_dir,
+            Transformed_filename=config.Transformed_filename,
+            Data_dir=config.Data_dir,
+            Id=config.Id,
+            Axis=config.Axis,
+            Inplace=config.Inplace,
+            Drop_Columns=config.Drop_Columns,
+            Class=config.Class,
+            Label=config.Label,
+            Tweet=config.Tweet
+
+
+        )
+
+        return data_transformation_config
+
