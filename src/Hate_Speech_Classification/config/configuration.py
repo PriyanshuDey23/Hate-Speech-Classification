@@ -69,4 +69,37 @@ class ConfigurationManager:
         )
 
         return data_transformation_config
+    
+
+    # Model Trainer
+
+
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        config = self.config.model_trainer
+        params = self.params.TrainingArguments
+
+        
+        create_directories([config['root_dir']])
+
+        model_trainer_config = ModelTrainerConfig(
+            root_dir=config.root_dir,
+            trained_model_path=config.trained_model_path,
+            x_test_data_path=config.x_test_data_path,
+            x_train_data_path=config.x_train_data_path,
+            y_test_data_path=config.y_test_data_path,
+            Random_state=params.Random_state,
+            Epoch=params.Epoch,
+            Batch_size=params.Batch_size,
+            Validation_Split=params.Validation_Split,
+            Max_Words=params.Max_Words,
+            Max_Len=params.Max_Len,
+            Loss=params.Loss,
+            Metrics=params.Metrics,
+            Activation=params.Activation,
+            test_size=params.test_size,
+            layers=params.layers
+            
+        )
+
+        return model_trainer_config
 

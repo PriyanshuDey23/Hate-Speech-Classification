@@ -1,1 +1,12 @@
-key: val
+TrainingArguments:
+  Random_state: 42           # Seed for reproducibility
+  Epoch: 10                   # Number of epochs for training
+  Batch_size: 128            # Number of samples per gradient update
+  Validation_Split: 0.2      # Percentage of training data to use for validation
+  Max_Words: 50000           # Maximum number of words to tokenize from the dataset
+  Max_Len: 300               # Maximum length of input sequences
+  Loss: 'binary_crossentropy' # Loss function for binary classification
+  Metrics: ['accuracy']      # Metrics to monitor during training
+  Activation: 'sigmoid'      # Activation function for the output layer (binary classification)
+  test_size: 0.3             # Size of the test set as a fraction of the total data
+  layers: 100                # Number of units (dimensions) in the Embedding and LSTM layers

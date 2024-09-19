@@ -58,3 +58,22 @@ except Exception as e:
 # After executing , artifacts\data_transformation\final.csv will get created
 
 
+
+
+# Call the pipeline  (src\Hate_Speech_Classification\pipeline\stage_04_model_trainer.py) in main .py 
+
+from Hate_Speech_Classification.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
+
+STAGE_NAME="Model Trainer Stage"
+try:
+    logging.info(f"Stage {STAGE_NAME} Started")
+    obj=ModelTrainerTrainingPipeline()  # Calling the class
+    obj.main()                           # Calling the main method,
+    logging.info(f" Stage {STAGE_NAME} Completed")
+
+except Exception as e:
+    raise CustomException(e,sys) from e
+
+# After executing , artifacts/model_trainer will get created
+
+
