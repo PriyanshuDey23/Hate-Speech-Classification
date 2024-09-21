@@ -32,3 +32,14 @@ model_trainer:
   x_test_data_path: artifacts/model_trainer/x_test.csv
   x_train_data_path: artifacts/model_trainer/x_train.csv
   y_test_data_path: artifacts/model_trainer/y_test.csv
+
+
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  data_path: artifacts/data_transformation/final.csv
+  model_path: artifacts/model_trainer/model/model.h5
+  tokenizer_path: artifacts/model_evaluation
+  metric_file_name: artifacts/model_evaluation
+  x_test_data_path: artifacts/model_trainer/x_test.csv
+  y_test_data_path: artifacts/model_trainer/y_test.csv

@@ -57,3 +57,17 @@ class ModelTrainerConfig:
     Activation: str
     test_size: float
     layers: int
+
+# Model Evaluation
+
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    data_path: Path
+    model_path: Path
+    metric_file_name: Path
+    tokenizer_path: Path
+    x_test_data_path: str
+    y_test_data_path: str
+    Max_Len: int
