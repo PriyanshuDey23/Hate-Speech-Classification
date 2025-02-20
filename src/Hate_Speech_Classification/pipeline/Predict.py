@@ -50,9 +50,9 @@ class PredictionPipeline:
             
             print("pred", pred)
             if pred[0] > 0.5:
-                return "hate and abusive"
+                return "Hate and Abusive"
             else:
-                return "no hate"
+                return "No Hate"
         except Exception as e:
             raise CustomException(e, sys) from e
         

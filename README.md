@@ -1,47 +1,82 @@
-# Hate-Speech-Classification
+# Hate Speech Classification
 
-## Workflows
+## 📌 Project Overview
+This project focuses on classifying text as **Hate Speech** or **No Hate Speech** using deep learning techniques. The model is trained on a labeled dataset and utilizes various deep learning architectures to achieve accurate predictions.
 
-1. Update config.yaml
-2. Update secrets.yaml [Optional]
-3. Update params.yaml
-4. Update the entity
-5. Update the configuration manager in src config
-6. Update the components
-7. Update the pipeline 
-8. Update the main.py
-9. Update the dvc.yaml
-10. app.py
+## 🛠️ Tech Stack
+- **Programming Language**: Python
+- **Deep Learning Framework**: TensorFlow/PyTorch
+- **Web Framework**: Streamlit (for frontend), Flask/FastAPI (for backend)
+- **Data Processing**: Pandas, Numpy, NLTK
 
-# How to run?
-### STEPS:
 
-Clone the repository
-
-```bash
-https://github.com/PriyanshuDey23/Hate-Speech-Classification
+## 📂 Project Structure
 ```
-### STEP 01- Create a conda environment after opening the repository
+Hate-Speech-Classification/
+│── src/
+│   ├── config/
+│   ├── components/
+│   ├── pipeline/
+│   ├── main.py
+│── app.py
+│── streamlit_app.py
+│── config.yaml
+│── params.yaml
+│── requirements.txt
+│── README.md
+```
 
+## 🔄 Workflows
+1. **Update `config.yaml`** - Define the configuration settings.
+2. **Update `secrets.yaml` (Optional)** - Store API keys or credentials securely.
+3. **Update `params.yaml`** - Configure hyperparameters.
+4. **Update the entity** - Define the data schema and classes.
+5. **Update the configuration manager (`src/config/`)** - Manage project settings.
+6. **Update the components** - Implement preprocessing, feature extraction, and modeling.
+7. **Update the pipeline** - Construct the ML pipeline.
+8. **Update `main.py`** - Define the execution flow.
+9. **Update `app.py`** - Implement backend logic.
+
+## 🚀 How to Run the Project?
+
+### **Step 1: Clone the Repository**
+```bash
+https://github.com/PriyanshuDey23/Hate-Speech-Classification.git
+```
+
+### **Step 2: Create and Activate a Virtual Environment**
 ```bash
 conda create -n cnncls python=3.8 -y
-```
-
-```bash
 conda activate cnncls
 ```
 
-
-### STEP 02- install the requirements
+### **Step 3: Install Dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-## Deployment
+### **Step 4: Run the Application**
+#### **Backend**
+```bash
+python app.py
+```
+#### **Frontend**
+```bash
+streamlit run streamlit_app.py
+```
 
-1. Setting up circleCI
-2. Switch on self hosted runner
-3. Create Project
-4. Configure EC2
-5. config.yml
-6. env variables
+---
+
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
+
+## 📞 Contact
+For any inquiries, reach out via [LinkedIn](https://www.linkedin.com/in/priyanshudey23) or email at `your-email@example.com`.
+
+---
+
+This README provides a clean and structured overview of your project. Let me know if you need any modifications! 🚀
+
