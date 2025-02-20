@@ -1,7 +1,7 @@
 # Hate Speech Classification
 
 
-![Hate Speech Classification](https://raw.githubusercontent.com/PriyanshuDey23/Hate-Speech-Classification/blob/main/Output.jpg)
+![Hate Speech Classification](Output.jpg)
 
 ## 📌 Project Overview
 This project uses deep learning techniques to classify text as **Hate Speech** or **No Hate Speech**. The model is trained on a labeled dataset and utilizes various deep-learning architectures to achieve accurate predictions.
