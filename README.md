@@ -73,11 +73,7 @@ streamlit run streamlit_app.py
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
-Contributions are welcome! Feel free to fork the repository and submit a pull request.
 
-## 📞 Contact
-For any inquiries, reach out via [LinkedIn](https://www.linkedin.com/in/priyanshudey23) or email at `your-email@example.com`.
 
 ---
 
